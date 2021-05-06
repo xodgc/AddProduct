@@ -8,6 +8,10 @@ label{
     text-align: right;
 }
 
-input [type=checkbox], input[type=button]{
+input[type=button]{
+    margin-left: 50%;
+}
+
+input[type=checkbox] {
     margin-left: 50%;
 }
