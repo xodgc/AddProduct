@@ -23,7 +23,16 @@ function getVideoGame() {
     game.title = inputTitle.value;
     var priceInput = getById("price");
     game.price = parseFloat(priceInput.value);
-    var rating = ;
+    var ratingInput = getById("rating");
+    game.rating = ratingInput.value;
+    var digitalOnly = getById("online");
+    if (digitalOnly.checked) {
+        game.isDigitalOnly = true;
+    }
+    else {
+        game.isDigitalOnly = false;
+    }
+    return game;
 }
 function displayGame(myGame) {
 }

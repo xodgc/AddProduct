@@ -32,6 +32,11 @@ function getById(id:string) {
     return document.getElementById(id);
 }
 
+/**
+ * Gets all game data from the form
+ * and returns it in a VideoGame object
+ */
+
 function getVideoGame():VideoGame {
     let game = new VideoGame();
     // TODO: populate with data from the form
@@ -41,7 +46,17 @@ function getVideoGame():VideoGame {
     let priceInput = <HTMLInputElement>getById("price");
     game.price = parseFloat(priceInput.value);
 
-    let rating = 
+    let ratingInput = <HTMLSelectElement>getById("rating");
+    game.rating = ratingInput.value;
+
+    let digitalOnly = <HTMLInputElement>getById("online");
+    if(digitalOnly.checked) {
+        game.isDigitalOnly = true;
+    }
+    else {
+        game.isDigitalOnly = false;
+    }
+    return game;
 
     // TODO: Return game
 }
