@@ -75,7 +75,7 @@ function displayGame(myGame: VideoGame): void {
     gameMediumDisplay = "You can come and buy a physical copy!";
   }
 
-  gameInfo.innerText = `${myGame.title} has a rating of ${myGame.rating}. It costs ${myGame.price}. ${gameMediumDisplay}`;
+  gameInfo.innerText = `${myGame.title} has a rating of ${myGame.rating}. It costs $${myGame.price.toFixed(2)}. ${gameMediumDisplay}`;
 
   displayDiv.appendChild(gameHeading);
 
