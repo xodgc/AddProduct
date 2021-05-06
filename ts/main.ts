@@ -4,6 +4,6 @@ window.onload = function() {
     addBtn.onclick = addVideoGame;
 }
 
-funtion addVideoGame() {
+function addVideoGame() {
     alert("test");
 }
