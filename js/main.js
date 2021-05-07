@@ -26,8 +26,11 @@ function displayRatingsLink() {
     var ratingsElements = document.querySelectorAll(".rating-error");
     for (var i = 0; i < ratingsElements.length; i++) {
         var currElem = ratingsElements[i];
-        currElem.innerHTML += "<a target='_blank' href='https://www.esrb.org/'>Click here for info</a>";
+        currElem.onclick = goToRatingsPage;
     }
+}
+function goToRatingsPage() {
+    window.open("https://www.esrb.org/", "_blank");
 }
 function getById(id) {
     return document.getElementById(id);

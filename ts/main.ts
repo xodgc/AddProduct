@@ -39,9 +39,14 @@ function addVideoGame() {
 function displayRatingsLink(){
     let ratingsElements = document.querySelectorAll(".rating-error");
     for(let i = 0; i < ratingsElements.length; i++){
-        let currElem = ratingsElements[i];
-        currElem.innerHTML += "<a target='_blank' href='https://www.esrb.org/'>Click here for info</a>";
+        let currElem = <HTMLElement>ratingsElements[i];
+        currElem.onclick = goToRatingsPage;
+        // currElem.innerHTML += "<a target='_blank' href='https://www.esrb.org/'>Click here for info</a>";
     }
+}
+
+function goToRatingsPage(){
+    window.open("https://www.esrb.org/", "_blank");
 }
 
 function getById(id: string) {
