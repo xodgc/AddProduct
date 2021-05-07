@@ -18,6 +18,16 @@ function addVideoGame() {
         var game = getVideoGame();
         displayGame(game);
     }
+    else {
+        displayRatingsLink();
+    }
+}
+function displayRatingsLink() {
+    var ratingsElements = document.querySelectorAll(".rating-error");
+    for (var i = 0; i < ratingsElements.length; i++) {
+        var currElem = ratingsElements[i];
+        currElem.innerHTML += "<a target='_blank' href='https://www.esrb.org/'>Click here for info</a>";
+    }
 }
 function getById(id) {
     return document.getElementById(id);

@@ -31,6 +31,17 @@ function addVideoGame() {
     let game = getVideoGame();
     displayGame(game);
   }
+  else {
+      displayRatingsLink();
+  }
+}
+
+function displayRatingsLink(){
+    let ratingsElements = document.querySelectorAll(".rating-error");
+    for(let i = 0; i < ratingsElements.length; i++){
+        let currElem = ratingsElements[i];
+        currElem.innerHTML += "<a target='_blank' href='https://www.esrb.org/'>Click here for info</a>";
+    }
 }
 
 function getById(id: string) {
