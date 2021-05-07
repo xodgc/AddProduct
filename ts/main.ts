@@ -112,7 +112,7 @@ function isAllDataValid() {
   let rating = (<HTMLInputElement>getById("rating")).value;
   if(rating == ""){
     isValid = false;
-    addErrorMessage("you must choose a rating");
+    addErrorMsgWithCustomClass("you must choose a rating", "rating-error");
   }
 
   return isValid;
@@ -120,6 +120,15 @@ function isAllDataValid() {
 function addErrorMessage(errMsg:string) {
     let errSummary = getById("validation-summary");
     let errItem = document.createElement("li");
+    errItem.innerText = errMsg;
+
+    errSummary.appendChild(errItem);
+}
+
+function addErrorMsgWithCustomClass(errMsg:string, cssClass:string){
+    let errSummary = getById("validation-summary");
+    let errItem = document.createElement("li");
+    errItem.classList.add(cssClass);
     errItem.innerText = errMsg;
 
     errSummary.appendChild(errItem);

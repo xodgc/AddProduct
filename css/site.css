@@ -15,3 +15,14 @@ input[type=button]{
 input[type=checkbox] {
     margin-left: 50%;
 }
+
+#validation-summary{
+    color: red;
+    list-style-type: square;
+
+}
+
+.rating-error{
+    font-weight: bolder;
+    font-style: italic;
+}
